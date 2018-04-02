@@ -1,0 +1,29 @@
+<div class="sidebar col-md-2">
+    <app-sidebar></app-sidebar>
+</div>
+<!-- pasted sidebar here -->
+
+<div class="col-md-10">
+    <div class="row">
+        <div class="form-group col-md-10">
+            <input type="text" [(ngModel)]=searchQuery placeholder="Search String..." class="form-control">
+        </div>
+        <div class="col-md-2">
+
+            <button (click)="searchByKeyword()" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <ol>
+            <li class="col-md-3 well card" *ngFor="let search of searchResults">
+                <div class="col-md-2">
+                    <img src="{{search.user.profile_image_url}}" />
+                </div>
+                <div class="col-md-8">{{search.text}}</div>
+            </li>
+        </ol>
+    </div>
+</div>

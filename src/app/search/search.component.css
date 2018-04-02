@@ -1,0 +1,12 @@
+ol {
+    list-style-type: none;
+}
+
+li {
+    font-style: italic;
+}
+
+.card {
+    height: 180px;
+    overflow: hidden;
+}

@@ -1,0 +1,42 @@
+<div class="col-md-4 col-md-offset-4">
+  <div *ngIf="!forgotPassword">
+    <div>
+      <a mat-button class="btn btn-link" routerLink="/login">Login</a>
+      <a mat-button class="btn btn-link" routerLink="/signup">Register</a>
+    </div>
+    <form>
+      <div>
+        <mat-form-field class="d-block">
+          <input matInput type="email" placeholder="Email" [(ngModel)]="email" name="email">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="d-block">
+          <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password">
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" (click)="login()">Login</button>
+      </div>
+    </form>
+  </div>
+  <br/>
+  <div *ngIf="!forgotPassword">
+    <a (click)="showForgotpassword()">Forgot password?</a>
+  </div>
+</div>
+
+<div *ngIf="forgotPassword">
+  <div class="col-md-4 col-md-offset-4">
+    <form>
+      <div>
+        <mat-form-field class="d-block">
+          <input matInput type="email" placeholder="Recovery email" [(ngModel)]="recoveryEmail" name="recoveryEmail">
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" (click)="resetPassword()">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+div {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
